@@ -5,8 +5,6 @@ import br.com.fiap.cyrela.repository.OcorrenciaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
 @Service
 public class OcorrenciaService {
 
@@ -15,11 +13,9 @@ public class OcorrenciaService {
 
     public OcorrenciaEntity buscarListaOcorrencias(Integer ticketNumber) {
 
-        Optional<OcorrenciaEntity> resultBusca = ocorrenciaRepository.findById(ticketNumber);
+        OcorrenciaEntity resultBusca = ocorrenciaRepository.findById(ticketNumber).get();
 
-        if (resultBusca.isEmpty()) {
-           return null;
-        }
-        return resultBusca.get();
+        return resultBusca;
+
     }
 }

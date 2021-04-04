@@ -14,7 +14,7 @@ public class AssistenciaService {
 
     public Garantia buscarGarantia(Integer pjoEmpreendId) {
         AssistenciaEntity resultBusca = assistenciaRepository.findByPjoEmpreendId(pjoEmpreendId);
-        //AssistenciaEntity resultBusca = assistenciaRepository.findById(pjoEmpreendId).get();
+
         Garantia garantia = new Garantia();
         garantia.setDtStart(resultBusca.getDtStart());
         garantia.setDtEnd(resultBusca.getDtEnd());
