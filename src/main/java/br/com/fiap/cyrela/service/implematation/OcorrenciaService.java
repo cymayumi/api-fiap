@@ -1,4 +1,4 @@
-package br.com.fiap.cyrela.service;
+package br.com.fiap.cyrela.service.implematation;
 
 import br.com.fiap.cyrela.entity.OcorrenciaEntity;
 import br.com.fiap.cyrela.repository.OcorrenciaRepository;

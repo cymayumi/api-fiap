@@ -1,7 +1,7 @@
 package br.com.fiap.cyrela.controller;
 
 import br.com.fiap.cyrela.entity.OcorrenciaEntity;
-import br.com.fiap.cyrela.service.OcorrenciaService;
+import br.com.fiap.cyrela.service.implematation.OcorrenciaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

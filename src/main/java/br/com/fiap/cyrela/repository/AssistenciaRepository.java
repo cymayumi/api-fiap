@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface AssistenciaRepository extends JpaRepository<AssistenciaEntity, Integer> {
 
-    AssistenciaEntity findByPjoEmpreendId(Integer pjoEmpreendId);
+
 }
