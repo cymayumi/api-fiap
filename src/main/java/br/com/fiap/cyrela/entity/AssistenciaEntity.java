@@ -1,5 +1,6 @@
 package br.com.fiap.cyrela.entity;
 
+import br.com.fiap.cyrela.dto.AssistenciaDTO;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -39,4 +40,7 @@ public class AssistenciaEntity {
     private Integer pjoUnidadeId;
 
 
+    public AssistenciaEntity (AssistenciaDTO assistenciaDTO){
+
+    }
 }

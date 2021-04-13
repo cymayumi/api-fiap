@@ -1,5 +1,6 @@
 package br.com.fiap.cyrela.entity;
 
+import br.com.fiap.cyrela.dto.OcorrenciaDTO;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -33,4 +34,8 @@ public class OcorrenciaEntity {
 
     @Column(name = "DESCRIPTION")
     private String description;
+
+    public OcorrenciaEntity(OcorrenciaDTO ocorrenciaDTO){
+
+    }
 }
