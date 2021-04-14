@@ -36,6 +36,13 @@ public class OcorrenciaEntity {
     private String description;
 
     public OcorrenciaEntity(OcorrenciaDTO ocorrenciaDTO){
+        this.description = ocorrenciaDTO.getDescription();
+        this.pjoBandeira = ocorrenciaDTO.getPjoBandeira();
+        this.pjoBloco = ocorrenciaDTO.getPjoBloco();
+        this.pjoClienteUnidade = ocorrenciaDTO.getPjoClienteUnidade();
+        this.pjoEmpreendId = ocorrenciaDTO.getPjoEmpreendId();
+        this.pjoUnidade = ocorrenciaDTO.getPjoUnidade();
+        this.ticketNumber = ocorrenciaDTO.getTicketNumber();
 
     }
 }

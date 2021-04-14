@@ -41,6 +41,13 @@ public class AssistenciaEntity {
 
 
     public AssistenciaEntity (AssistenciaDTO assistenciaDTO){
+        this.dtEnd =assistenciaDTO.getDtEnd();
+        this.dtStart = assistenciaDTO.getDtStart();
+        this.pjoBlocoId = assistenciaDTO.getPjoBlocoId();
+        this.pjoEmpreendId = assistenciaDTO.getPjoEmpreendId();
+        this.pjoTipoAtv = assistenciaDTO.getPjoTipoAtv();
+        this.pjoUnidadeId = assistenciaDTO.getPjoUnidadeId();
+        this.subject = getSubject();
 
     }
 }
