@@ -1,7 +1,7 @@
 package br.com.fiap.cyrela.controller;
 
 import br.com.fiap.cyrela.dto.AssistenciaDTO;
-import br.com.fiap.cyrela.dto.Garantia;
+import br.com.fiap.cyrela.dto.GarantiaDTO;
 import br.com.fiap.cyrela.service.AssistenciaServ;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ public class AssistenciaController {
     @GetMapping("/garantia/{pjoEmpreendId}")
     public ResponseEntity verificarGarantia(@PathVariable("pjoEmpreendId") Integer pjoEmpreendId) {
         try {
-            Garantia prazo = assistenciaServ.buscarGarantia(pjoEmpreendId);
+            GarantiaDTO prazo = assistenciaServ.buscarGarantia(pjoEmpreendId);
             return ResponseEntity.status(HttpStatus.OK).body(prazo);
         } catch (Exception e) {
             e.printStackTrace();

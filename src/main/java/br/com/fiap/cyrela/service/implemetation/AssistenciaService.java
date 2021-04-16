@@ -1,7 +1,7 @@
 package br.com.fiap.cyrela.service.implemetation;
 
 import br.com.fiap.cyrela.dto.AssistenciaDTO;
-import br.com.fiap.cyrela.dto.Garantia;
+import br.com.fiap.cyrela.dto.GarantiaDTO;
 import br.com.fiap.cyrela.entity.AssistenciaEntity;
 import br.com.fiap.cyrela.repository.AssistenciaRepository;
 import br.com.fiap.cyrela.service.AssistenciaServ;
@@ -23,10 +23,10 @@ public class AssistenciaService implements AssistenciaServ {
 
     }
 
-    public Garantia buscarGarantia(Integer pjoEmpreendId) {
+    public GarantiaDTO buscarGarantia(Integer pjoEmpreendId) {
         Optional<AssistenciaEntity> resultBusca = assistenciaRepository.findById(pjoEmpreendId);
 
-        Garantia garantia = new Garantia();
+        GarantiaDTO garantia = new GarantiaDTO();
         garantia.setDtStart(resultBusca.get().getDtStart());
         garantia.setDtEnd(resultBusca.get().getDtEnd());
         return garantia;

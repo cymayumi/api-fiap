@@ -1,12 +1,12 @@
 package br.com.fiap.cyrela.service;
 
 import br.com.fiap.cyrela.dto.AssistenciaDTO;
-import br.com.fiap.cyrela.dto.Garantia;
+import br.com.fiap.cyrela.dto.GarantiaDTO;
 
 
 public interface AssistenciaServ {
 
-    Garantia buscarGarantia(Integer pjoEmpreendId);
+    GarantiaDTO buscarGarantia(Integer pjoEmpreendId);
 
     void save (AssistenciaDTO assistencia);
 
