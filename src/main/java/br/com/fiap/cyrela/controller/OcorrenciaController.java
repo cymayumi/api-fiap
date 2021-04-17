@@ -17,7 +17,7 @@ public class OcorrenciaController {
     OcorrenciaServ ocorrenciaServ;
 
     @PostMapping("/ocorrencia")
-    public String addOcorrencia(OcorrenciaDTO ocorrencia){
+    public String addOcorrencia(@RequestBody OcorrenciaDTO ocorrencia){
     ocorrenciaServ.save(ocorrencia);
     return "Ocorrencia incluída!";
     }
