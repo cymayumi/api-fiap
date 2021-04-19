@@ -34,13 +34,13 @@ public class AssistenciaController {
     }
 
     @PutMapping("/update-assistencia")
-    public ResponseEntity <AssistenciaDTO> updateAssistencia(@RequestBody AssistenciaDTO assistencia){
+    public ResponseEntity updateAssistencia(@RequestBody AssistenciaDTO assistencia){
         try{
             assistenciaServ.save(assistencia);
-            return ResponseEntity.status(HttpStatus.OK).body(assistencia);
+            return ResponseEntity.status(HttpStatus.OK).body("Assistência atualizada");
         }catch (Exception e){
             e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(assistencia);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao tentar atualizar assistencia");
         }
     }
 

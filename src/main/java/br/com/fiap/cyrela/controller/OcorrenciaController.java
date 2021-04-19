@@ -13,14 +13,11 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class OcorrenciaController {
 
-
-
-
     @Autowired
     OcorrenciaServ ocorrenciaServ;
 
     @PostMapping("/ocorrencia")
-    public String addOcorrencia(OcorrenciaDTO ocorrencia){
+    public String addOcorrencia(@RequestBody OcorrenciaDTO ocorrencia){
     ocorrenciaServ.save(ocorrencia);
     return "Ocorrencia incluída!";
     }
@@ -37,13 +34,13 @@ public class OcorrenciaController {
     }
 
     @PutMapping("update-ocorrencia")
-    public ResponseEntity<OcorrenciaDTO> updateOcorrencia(@RequestBody OcorrenciaDTO ocorrencia){
+    public ResponseEntity updateOcorrencia(@RequestBody OcorrenciaDTO ocorrencia){
         try{
             ocorrenciaServ.save(ocorrencia);
-            return ResponseEntity.status(HttpStatus.OK).body(ocorrencia);
+            return ResponseEntity.status(HttpStatus.OK).body("Ocorrencia atualizada");
         }catch (Exception e) {
             e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(ocorrencia);
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erro ao atualizar ocorrencia");
         }
     }
 }

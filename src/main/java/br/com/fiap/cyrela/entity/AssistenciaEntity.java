@@ -47,7 +47,7 @@ public class AssistenciaEntity {
         this.pjoEmpreendId = assistenciaDTO.getPjoEmpreendId();
         this.pjoTipoAtv = assistenciaDTO.getPjoTipoAtv();
         this.pjoUnidadeId = assistenciaDTO.getPjoUnidadeId();
-        this.subject = getSubject();
+        this.subject = assistenciaDTO.getSubject();
 
     }
 }
